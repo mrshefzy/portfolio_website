@@ -11,12 +11,18 @@
     <style>
         /* --- Universal Styles & Resets --- */
         :root {
-            /* --- NEW: Vibrant Purple Color Scheme --- */
+            /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
+            /* ★  1. PLACE TO CHANGE YOUR BACKGROUND IMAGE  ★ */
+            /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
+            /* Just replace the URL below with the URL of your desired image. */
+            --background-image-url: url('https://files.catbox.moe/312g7d.jpg');
+
+            /* --- Vibrant Purple Color Scheme --- */
             --primary-color: #9b59b6; /* A rich, modern purple */
             --primary-hover-color: #8e44ad;
             --gradient-text: linear-gradient(45deg, #a864df, #e67e22, #f1c40f);
 
-            /* --- NEW: Glassmorphism Surface Colors --- */
+            /* --- Glassmorphism Surface Colors --- */
             --surface-color: rgba(255, 255, 255, 0.05);
             --surface-border-color: rgba(255, 255, 255, 0.1);
             --surface-blur: 10px;
@@ -36,15 +42,14 @@
         }
 
         body {
-            /* --- NEW: Waterfall Background --- */
             font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1547076413-50937a0a256a?q=80&w=1887&auto=format&fit=crop');
+            /* This now uses the variable defined at the top, making it easy to change */
+            background-image: var(--background-image-url);
             background-size: cover;
             background-position: center;
             background-attachment: fixed; /* This keeps the background still while scrolling */
             color: var(--text-color);
             line-height: 1.6;
-            /* A dark overlay to ensure text is readable */
             position: relative;
         }
         
@@ -56,6 +61,12 @@
             left: 0;
             right: 0;
             bottom: 0;
+            /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
+            /* ★  2. PLACE TO ADJUST BACKGROUND DARKNESS/OVERLAY  ★ */
+            /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★ */
+            /* The last number (0.7) controls the darkness. 
+               - Increase it (e.g., 0.8) for a darker overlay (better for light backgrounds).
+               - Decrease it (e.g., 0.5) for a lighter overlay (better for dark backgrounds). */
             background-color: rgba(10, 5, 20, 0.7);
             z-index: -1;
         }
@@ -70,7 +81,6 @@
 
         /* --- Header & Navigation (Glassmorphism) --- */
         .header {
-            /* --- NEW: Glass effect for the header --- */
             background-color: rgba(20, 10, 30, 0.5);
             backdrop-filter: blur(var(--surface-blur));
             -webkit-backdrop-filter: blur(var(--surface-blur));
@@ -144,7 +154,6 @@
             font-size: 2.8rem;
             font-weight: 700;
             margin-bottom: 3rem;
-            /* --- NEW: Gradient Text --- */
             background: var(--gradient-text);
             -webkit-background-clip: text;
             background-clip: text;
@@ -191,7 +200,6 @@
         }
 
         .project-card {
-            /* --- NEW: Glass effect for cards --- */
             background-color: var(--surface-color);
             backdrop-filter: blur(var(--surface-blur));
             -webkit-backdrop-filter: blur(var(--surface-blur));
@@ -219,7 +227,7 @@
         .project-card p {
             margin-bottom: 1.5rem;
             color: var(--text-secondary-color);
-            flex-grow: 1; /* Makes sure the button aligns to the bottom */
+            flex-grow: 1; 
         }
 
         .project-card a {
@@ -276,7 +284,6 @@
         
         /* --- Footer --- */
         .footer {
-            /* --- NEW: Glass effect for footer --- */
             background-color: rgba(20, 10, 30, 0.5);
             backdrop-filter: blur(var(--surface-blur));
             -webkit-backdrop-filter: blur(var(--surface-blur));
@@ -286,7 +293,6 @@
             border-top: 1px solid var(--surface-border-color);
         }
         
-        /* --- NEW: Channel Section in Footer --- */
         .channel-section {
             margin-bottom: 2rem;
         }
@@ -349,7 +355,6 @@
         <!-- ======== HERO SECTION ======== -->
         <section id="hero">
             <div class="container">
-                <!-- CUSTOMIZE: Change this text to your main headline -->
                 <h1>Creative Developer & Problem Solver</h1>
                 <p>Building beautiful and functional web applications from scratch.</p>
             </div>
@@ -359,7 +364,6 @@
         <section id="about">
             <div class="container">
                 <h2>About Me</h2>
-                <!-- CUSTOMIZE: Write a paragraph about yourself here -->
                 <p>
                     Hello! I'm Mr Shefzy, also known as certified bloodshedder, a passionate developer with a love for clean code and intuitive design. My journey into the world of programming started with a simple "Hello, World!" and has since grown into a full-fledged passion for creating meaningful digital experiences. I specialize in front-end and back-end development, turning complex problems into elegant, user-friendly solutions. When I'm not coding, I enjoy exploring new technologies and contributing to open-source projects.
                 </p>
@@ -371,25 +375,20 @@
             <div class="container">
                 <h2>My Projects</h2>
                 <div class="projects-grid">
-                    <!-- CUSTOMIZE: Project 1 -->
                     <div class="project-card">
                         <h3>MICHIKO-MD 1</h3>
                         <p>A multifunction WhatsApp bot with uncountable features, fun/download/games and so on.</p>
                         <a href="https://t.me/michikomd_bot" target="_blank">View Project</a>
                     </div>
-
-                    <!-- CUSTOMIZE: Project 2 -->
                     <div class="project-card">
                         <h3>BLOODY-SHEFZY 1,2,3</h3>
                         <p>A WhatsApp Bug Bot used to deal with ones enemy amd sometimes can be used for fun also.</p>
-                        <a href="#">Coming soon...</a>
+                        <a href="#">OUT</a>
                     </div>
-                    
-                    <!-- CUSTOMIZE: Project 3 -->
                     <div class="project-card">
                         <h3>BLACK-PANTHER 1</h3>
                         <p>A dangerous Bug Bot, very fast in sending viruses to victims, with some fun menu added too.</p>
-                        <a href="#">Coming soon....</a>
+                        <a href="#">OUT.</a>
                     </div>
                 </div>
             </div>
@@ -401,7 +400,6 @@
                 <h2>Get In Touch</h2>
                 <p>Have a project in mind or just want to say hi? Feel free to reach out!</p>
                 <div class="contact-links">
-                    <!-- CUSTOMIZE: Update these links with your actual contact info -->
                     <a href="https://wa.me/2348082369566" target="_blank" class="contact-button">WhatsApp Me</a>
                     <a href="https://t.me/certifiedbloodshedder" target="_blank" class="contact-button">Telegram Me</a>
                 </div>
@@ -412,18 +410,13 @@
     <!-- ======== FOOTER ======== -->
     <footer class="footer">
         <div class="container">
-
-            <!-- ======== NEW: CHANNEL SECTION ======== -->
             <div class="channel-section">
                 <h3>Join My Channel</h3>
                 <div class="channel-links">
-                    <!-- CUSTOMIZE: Add your channel links here -->
                     <a href="https://whatsapp.com/channel/0029Vasjwk25K3zcsuGFK41v" target="_blank" class="contact-button">WhatsApp Channel</a>
                     <a href="https://t.me/Shefzytechinc" target="_blank" class="contact-button">Telegram Channel</a>
                 </div>
             </div>
-
-            <!-- CUSTOMIZE: Update the year if needed -->
             <p>© 2025 Mr Shefzy. All Rights Reserved.</p>
         </div>
     </footer>
